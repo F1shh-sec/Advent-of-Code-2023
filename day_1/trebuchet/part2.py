@@ -8,12 +8,6 @@ def get_numbers(line):
     if words != []:
         first_number = word_to_num(words[0])
         second_number = word_to_num(words2[0])
-        print("Line:", line.strip())
-        print("Words Found:", words)
-        print("First Number:", first_number)
-        print("Second Number:", second_number)
-        print("New Number:", (str(first_number) + str(second_number)))
-        print()
         return int(str(first_number) + str(second_number))
     else: 
         return 0
@@ -21,7 +15,6 @@ def get_numbers(line):
 
 def word_to_num(word):
     number = 0
-    print(word)
     match word:
         case "one" | "eno":
             number = 1
@@ -53,7 +46,7 @@ def main():
         total = 0
         for line in file:
             total = total + get_numbers(line)
-        print(total)
+        print("Total:", total)
 
 
 if __name__ == "__main__":
